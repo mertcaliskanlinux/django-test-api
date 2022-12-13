@@ -16,12 +16,21 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from test_app.views import SimleViewset
+from django.conf import settings
 
 from rest_framework import routers
 router = routers.DefaultRouter()
 router.register("simple-viewset",SimleViewset)
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('simple/',include(router.urls)),
+    path('',include(router.urls)),
 ]
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        path('__debug__/',include(debug_toolbar.urls))
+    ]+urlpatterns
+    

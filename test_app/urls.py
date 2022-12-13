@@ -3,7 +3,7 @@ from test_app.views import SimleViewset
 
 urlpatterns = [
 
-    path('simple-generics',SimleViewset.as_view()),
+    path('',SimleViewset.as_view()),
 
 
 ]
