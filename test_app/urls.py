@@ -1,10 +1,9 @@
 from django.urls import path
-from test_app.views import SimpleGenerics,SimpleUpdateGenerics
+from test_app.views import SimleViewset
 
 urlpatterns = [
 
-    path('simple-generics',SimpleGenerics.as_view()),
-    path('simple-generics/<int:id>',SimpleUpdateGenerics.as_view()),
+    path('simple-generics',SimleViewset.as_view()),
 
 
 ]

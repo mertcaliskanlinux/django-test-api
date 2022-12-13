@@ -1,21 +1,15 @@
 
 from test_app.models import TestModel
 from test_app.serializers import SimpleSerializer
-from rest_framework import generics
-
+from rest_framework import viewsets
 
 
     
     
-class SimpleGenerics(generics.ListCreateAPIView):
-    
-    queryset = TestModel.objects.all()
-    serializer_class = SimpleSerializer
-
-class SimpleUpdateGenerics(generics.UpdateAPIView):
+class SimleViewset(viewsets.ModelViewSet):
     
     queryset = TestModel.objects.all()
     serializer_class = SimpleSerializer
-    lookup_field = "id"
+    
     
     
