@@ -1,4 +1,4 @@
-#!/home/mert/Desktop/django_youtube_api/env/bin/python3
+#!/home/mert/Desktop/django-test-apii/env/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
